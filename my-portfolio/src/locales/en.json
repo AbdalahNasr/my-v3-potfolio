@@ -1,0 +1,264 @@
+{
+  "hero": {
+    "title": "Full Stack Developer",
+    "subtitle": "Building modern web applications with cutting-edge technologies",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me",
+    "imageAlt": "Programming Animation",
+    "greeting": "Hello, I'm",
+    "name": "Your Name",
+    "designer": "& Designer",
+    "description": "Passionate developer creating innovative solutions with modern technologies"
+  },
+  "nav": {
+    "logo": "Dev.Portfolio",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cv": "CV",
+    "home": "Home"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating efficient, scalable, and user-friendly applications that solve real-world problems.",
+    "highlights": [
+      "5+ years of development experience",
+      "Expert in React, Next.js, and Node.js",
+      "Passionate about clean code and best practices",
+      "Always learning new technologies"
+    ],
+    "downloadCV": "Download CV",
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "happyClients": "Happy Clients",
+    "technologies": "Technologies Mastered"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Technologies I work with",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Creating responsive and interactive user interfaces"
+      },
+      "backend": {
+        "title": "Backend Development", 
+        "description": "Building robust server-side applications and APIs"
+      },
+      "database": {
+        "title": "Database Management",
+        "description": "Designing and managing efficient database systems"
+      },
+      "tools": {
+        "title": "Development Tools",
+        "description": "Using modern tools for efficient development workflow"
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "description": "Deploying and managing applications in the cloud"
+      }
+    },
+    "skillsList": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nodejs": "Node.js",
+      "express": "Express.js",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
+      "git": "Git",
+      "docker": "Docker",
+      "aws": "AWS",
+      "vercel": "Vercel",
+      "tailwind": "Tailwind CSS",
+      "sass": "Sass/SCSS",
+      "python": "Python",
+      "java": "Java",
+      "php": "PHP",
+      "laravel": "Laravel"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of my recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "technologies": "Technologies Used",
+    "allProjects": "View All Projects",
+    "categories": {
+      "all": "All",
+      "web": "Web Apps",
+      "mobile": "Mobile",
+      "api": "APIs",
+      "fullstack": "Full Stack"
+    },
+    "projectsList": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
+        "category": "fullstack",
+        "technologies": ["Next.js", "Node.js", "MongoDB", "Stripe"],
+        "features": [
+          "User authentication and authorization",
+          "Product catalog with search and filters",
+          "Shopping cart and checkout process",
+          "Payment integration with Stripe",
+          "Admin dashboard for inventory management",
+          "Order tracking and management"
+        ]
+      },
+      "taskmanager": {
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates and team collaboration features.",
+        "category": "web",
+        "technologies": ["React", "Firebase", "Material-UI", "Socket.io"],
+        "features": [
+          "Real-time collaboration",
+          "Task assignment and tracking",
+          "Project organization",
+          "Team chat functionality",
+          "File attachments",
+          "Progress analytics"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio Website",
+        "description": "A modern, responsive portfolio website with dark mode, animations, and multilingual support.",
+        "category": "web",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        "features": [
+          "Responsive design",
+          "Dark/Light mode toggle",
+          "Smooth animations",
+          "Multilingual support",
+          "Contact form integration",
+          "SEO optimized"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "present": "Present",
+    "experiences": [
+      {
+        "position": "Senior Full Stack Developer",
+        "company": "Tech Solutions Inc.",
+        "period": "2022 - Present",
+        "location": "Remote",
+        "description": "Leading development of enterprise web applications using React, Node.js, and cloud technologies.",
+        "achievements": [
+          "Led a team of 5 developers in building a customer portal",
+          "Improved application performance by 40%",
+          "Implemented CI/CD pipelines reducing deployment time by 60%",
+          "Mentored junior developers and conducted code reviews"
+        ]
+      },
+      {
+        "position": "Full Stack Developer",
+        "company": "Digital Agency Co.",
+        "period": "2020 - 2022",
+        "location": "New York, NY",
+        "description": "Developed and maintained multiple client websites and web applications.",
+        "achievements": [
+          "Built 15+ responsive websites for various clients",
+          "Integrated third-party APIs and payment systems",
+          "Optimized websites for SEO and performance",
+          "Collaborated with design team to implement pixel-perfect UIs"
+        ]
+      },
+      {
+        "position": "Frontend Developer",
+        "company": "StartupXYZ",
+        "period": "2019 - 2020",
+        "location": "San Francisco, CA",
+        "description": "Focused on creating engaging user interfaces and improving user experience.",
+        "achievements": [
+          "Developed responsive web applications using React",
+          "Implemented modern CSS techniques and animations",
+          "Collaborated with UX designers to improve user flows",
+          "Reduced page load times by 50% through optimization"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "description": "I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Dev.Portfolio. All rights reserved.",
+    "madeWith": "Made with",
+    "and": "and",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language",
+    "english": "EN",
+    "arabic": "AR",
+    "readMore": "Read More",
+    "showLess": "Show Less",
+    "viewAll": "View All",
+    "backToTop": "Back to Top",
+    "comingSoon": "Coming Soon",
+    "underDevelopment": "Under Development"
+  },
+  "meta": {
+    "title": "Full Stack Developer | Modern Web Applications",
+    "description": "Experienced full-stack developer specializing in React, Next.js, and Node.js. Creating modern, scalable web applications with cutting-edge technologies.",
+    "keywords": "full stack developer, react developer, next.js, node.js, web development, javascript, typescript",
+    "author": "Your Name"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Toggle language"
+  }
+}

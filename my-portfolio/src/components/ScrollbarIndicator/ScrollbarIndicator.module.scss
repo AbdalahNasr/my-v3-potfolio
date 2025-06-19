@@ -1,0 +1,31 @@
+.scrollBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100vw;
+  background: rgba(255,255,255,0.1);
+  z-index: 10000;
+}
+.progress {
+  height: 100%;
+  background: #e453ed;
+  transition: width 0.2s;
+}
+.scrollbarIndicator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 0;
+  background: rgba(149, 76, 233, 0.85); // --primary
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(149, 76, 233, 0.5);
+  transition: height 0.1s;
+}
+
+.dark .scrollbarIndicator {
+  background: rgba(186, 104, 255, 0.9); // --primary-dark
+  box-shadow: 0 0 10px rgba(186, 104, 255, 0.5);
+}
