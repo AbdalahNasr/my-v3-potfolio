@@ -12,7 +12,3 @@
   filter: drop-shadow(0 0 8px #954ce9) drop-shadow(0 0 16px #4cc9f0);
   opacity: 1 !important;
 }
-
-:global(html), :global(body), :global(#__next), :global(main), :global(*) {
-  cursor: none !important;
-}

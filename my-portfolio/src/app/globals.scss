@@ -17,6 +17,11 @@ body {
   cursor: default;
 }
 
+/* Hide default cursor globally */
+:root, html, body, #__next, main, * {
+  cursor: none !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
