@@ -86,9 +86,10 @@
   "projects": {
     "title": "المشاريع المميزة",
     "subtitle": "بعض من أعمالي الحديثة",
+    "visitProject": "زيارة المشروع",
     "viewProject": "عرض المشروع",
     "viewCode": "عرض الكود",
-    "liveDemo": "عر�� مباشر",
+    "liveDemo": "عرض مباشر",
     "technologies": "التقنيات المستخدمة",
     "allProjects": "عرض جميع المشاريع",
     "categories": {
@@ -115,7 +116,7 @@
       },
       "taskmanager": {
         "title": "تطبيق إدارة المهام",
-        "description": "تطبيق إدارة مهام تعاوني مع ��حديثات فورية وميزات التعاون الجماعي.",
+        "description": "تطبيق إدارة مهام تعاوني مع تحديثات فورية وميزات التعاون الجماعي.",
         "category": "web",
         "technologies": ["React", "Firebase", "Material-UI", "Socket.io"],
         "features": [
@@ -219,10 +220,9 @@
     }
   },
   "footer": {
-    "copyright": "© 2025 محفظة.المطور. جميع الحقوق محفوظة.",
-    "madeWith": "صُنع بـ",
-    "and": "و",
-    "builtWith": "بُني باستخدام Next.js و Tailwind CSS"
+    "logo": "محفظة.المطور",
+    "cv": "سيرتي الذاتية",
+    "copyright": "© 2025 جميع الحقوق محفوظة"
   },
   "common": {
     "loading": "جاري التحميل...",

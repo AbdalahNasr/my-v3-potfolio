@@ -2,61 +2,12 @@
 
 import React, { useRef } from "react";
 import { useLanguage } from "../LanguageToggle/LanguageContext";
+import styles from './ProjectsSection.module.scss';
 
-const demoProjects = [
-	{
-		image:
-			"https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg",
-		title: "E-Commerce Platform",
-		desc: "A modern e-commerce solution with 3D product previews and AR try-on features.",
-		tech: ["React", "Three.js", "AR"],
-		details:
-			"A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-		bullets: [
-			"User authentication and authorization",
-			"Product catalog with search and filters",
-			"Shopping cart and checkout process",
-			"Payment integration with Stripe",
-			"Admin dashboard for inventory management",
-			"Order tracking and management",
-		],
-		link: "#",
-	},
-	{
-		image:
-			"https://cdn.pixabay.com/photo/2018/03/27/12/16/analytics-3265840_1280.jpg",
-		title: "Analytics Dashboard",
-		desc: "Interactive data visualization dashboard with real-time updates and customizable widgets.",
-		tech: ["Next.js", "D3.js", "WebSocket"],
-		details:
-			"A collaborative task management application with real-time updates and team collaboration features.",
-		bullets: [
-			"Real-time collaboration",
-			"Task assignment and tracking",
-			"Project organization",
-			"Team chat functionality",
-			"File attachments",
-			"Progress analytics",
-		],
-		link: "#",
-	},
-	{
-		image:
-			"https://cdn.pixabay.com/photo/2017/12/29/12/07/mobile-phone-3047321_1280.jpg",
-		title: "Fitness Tracker App",
-		desc: "A cross-platform fitness application with personalized workout plans and progress tracking.",
-		tech: ["Flutter", "Firebase", "AI"],
-		details:
-			"A cross-platform fitness application with personalized workout plans and progress tracking.",
-		bullets: [
-			"Personalized workout plans",
-			"Progress tracking",
-			"Nutrition logging",
-			"Social sharing",
-			"Goal setting",
-		],
-		link: "#",
-	},
+const projectImages = [
+	"https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg",
+	"https://cdn.pixabay.com/photo/2018/03/27/12/16/analytics-3265840_1280.jpg",
+	"https://cdn.pixabay.com/photo/2017/12/29/12/07/mobile-phone-3047321_1280.jpg"
 ];
 
 const cardColors = [
@@ -138,19 +89,17 @@ const ProjectsSection: React.FC = () => {
 		};
 	}, []);
 
+	// Get projects from locale JSON
+	const projectsList = t.projects.projectsList;
+	const projectKeys = Object.keys(projectsList);
+
 	return (
 		<section
 			id="projects"
-			style={{
-				minHeight: "100vh",
-				background:
-					theme === "dark"
-						? "linear-gradient(135deg, #18181b 0%, #312e81 100%)"
-						: "linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%)",
-				padding: "4rem 0",
-				position: "relative",
-				transition: "background 0.3s",
-			}}
+			className={
+				styles.projectsSection +
+				" w-full max-w-screen overflow-x-hidden px-4 py-20 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+			}
 		>
 			<style>{`
 			.project-card {
@@ -205,14 +154,17 @@ const ProjectsSection: React.FC = () => {
 					{t.projects.title}
 				</h2>
 				<div
+					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 					style={{
-						display: "grid",
-						gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-						gap: "2rem",
+						width: "100%",
+						margin: "0 auto",
 					}}
 				>
-					{demoProjects.map((project, idx) => {
+					{projectKeys.map((key, idx) => {
+						const project = projectsList[key];
 						const cardRef = useCardParallax();
+						// fallback to demo images if you want to keep the visuals
+						const image = projectImages[idx] || projectImages[0];
 						return (
 							<div
 								key={project.title}
@@ -235,7 +187,7 @@ const ProjectsSection: React.FC = () => {
 								}}
 							>
 								<img
-									src={project.image}
+									src={image}
 									alt={project.title}
 									style={{
 										width: "100%",
@@ -261,7 +213,7 @@ const ProjectsSection: React.FC = () => {
 										marginBottom: 12,
 									}}
 								>
-									{project.desc}
+									{project.description}
 								</p>
 								<div
 									style={{
@@ -271,7 +223,7 @@ const ProjectsSection: React.FC = () => {
 										marginBottom: 16,
 									}}
 								>
-									{project.tech.map((tech) => (
+									{project.technologies && project.technologies.map((tech: string) => (
 										<span
 											key={tech}
 											style={{
@@ -315,12 +267,12 @@ const ProjectsSection: React.FC = () => {
 										paddingLeft: 18,
 									}}
 								>
-									{project.bullets.map((b, i) => (
+									{project.features && project.features.map((b: string, i: number) => (
 										<li key={i}>{b}</li>
 									))}
 								</ul>
 								<a
-									href={project.link}
+									href={project.link || "#"}
 									target="_blank"
 									rel="noopener noreferrer"
 									style={{
@@ -357,7 +309,7 @@ const ProjectsSection: React.FC = () => {
 											: "0 2px 12px rgba(76,201,240,0.18)";
 									}}
 								>
-									Visit Project
+									{t.projects.visitProject}
 								</a>
 							</div>
 						);

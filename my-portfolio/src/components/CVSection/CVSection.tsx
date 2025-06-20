@@ -29,9 +29,13 @@ export default function CVSection() {
   }, []);
 
   return (
-    <div
+    <section
       ref={sectionRef}
-      className={styles['cv-section']}
+      className={
+        styles.cvSection +
+        ' w-full max-w-screen overflow-x-hidden px-4 py-20 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300'
+      }
+      id="cv"
     >
       <div className="container mx-auto px-4 md:px-8 py-20">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-center tracking-tight">
@@ -59,6 +63,6 @@ export default function CVSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
