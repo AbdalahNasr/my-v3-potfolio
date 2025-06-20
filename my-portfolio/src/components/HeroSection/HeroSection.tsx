@@ -52,7 +52,7 @@ export default function HeroSection() {
       <div className="w-full md:w-2/5 flex justify-center items-center mb-8 md:mb-0 parallax-element" data-depth="0.1">
         <div className="relative">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 rounded-lg blur-md opacity-50" />
-          <div className="relative rounded-lg shadow-xl overflow-hidden">
+          <div className="relative rounded-lg shadow-xl overflow-hidden" style={{boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0'}}>
             <Image
               src="/Programming.gif"
               alt={t.hero.imageAlt}
@@ -67,18 +67,19 @@ export default function HeroSection() {
       {/* Text right */}
       <div className="md:w-3/5 flex flex-col items-start justify-center">
         <div className="hero-content">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 max-w-3xl">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 max-w-3xl leading-tight md:leading-tight">
             <span className="parallax-element block hero-anim" data-depth="0.1">{t.hero.greeting}</span>
             <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.name}</span>
-            <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.title}</span>
+            <span className="parallax-element block hero-anim " data-depth="0.2">{t.hero.title}</span>
             <span
-              className="parallax-element block hero-anim bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 text-transparent bg-clip-text"
+              className="parallax-element block hero-anim bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 text-transparent bg-clip-text whitespace-pre-line"
               data-depth="0.3"
+              style={{display: 'inline', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}
             >
               {t.hero.designer}
             </span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-2xl mb-12 text-gray-600 dark:text-gray-300 parallax-element hero-anim" data-depth="0.05">
+          <p className="text-xl md:text-2xl  max-w-2xl mb-12 text-gray-600 dark:text-gray-300 parallax-element hero-anim" data-depth="0.05">
             {t.hero.description}
           </p>
           <a

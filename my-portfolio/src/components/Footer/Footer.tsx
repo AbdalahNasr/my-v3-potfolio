@@ -20,7 +20,7 @@ export default function Footer() {
               <span className={lang === 'ar' ? 'ml-2' : 'mr-2'}>{t.footer?.cv || 'My CV'}</span>
               <i className="fas fa-file-alt"></i>
             </a>
-            <div className="relative w-32 h-32 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
+            <div className="relative w-32 h-32 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md" style={{boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0'}}>
               <img src="/QR_Code.png" alt="CV QR Code" className="w-full h-full" />
             </div>
           </div>

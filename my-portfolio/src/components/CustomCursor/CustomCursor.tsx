@@ -14,5 +14,14 @@ export default function CustomCursor() {
     return () => document.removeEventListener('mousemove', move);
   }, []);
 
-  return <div id="custom-cursor" className={styles.cursor}></div>;
+  return (
+    <div id="custom-cursor" className={styles.cursor}>
+      <img
+        src="/rocket-cursor.svg"
+        alt="Rocket Cursor"
+        style={{ width: 32, height: 32, display: 'block', pointerEvents: 'none' }}
+        draggable={false}
+      />
+    </div>
+  );
 }

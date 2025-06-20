@@ -1,11 +1,18 @@
 .cursor {
   position: fixed;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #fff;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: background 0.2s;
+  transition: background 0.2s, filter 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 8px #954ce9) drop-shadow(0 0 16px #4cc9f0);
+  opacity: 1 !important;
+}
+
+:global(html), :global(body), :global(#__next), :global(main), :global(*) {
+  cursor: none !important;
 }

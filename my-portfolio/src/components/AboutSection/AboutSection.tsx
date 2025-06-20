@@ -58,7 +58,7 @@ export default function AboutSection() {
     >
       <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-12">
         <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
-          <img src="/programming-illustration.svg" alt="About Illustration" className="max-w-xs md:max-w-sm rounded-lg shadow-xl parallax-element" data-depth="0.1" />
+          <img src="/programming-illustration.svg" alt="About Illustration" className="max-w-xs md:max-w-sm rounded-lg shadow-xl parallax-element" data-depth="0.1" style={{boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0'}} />
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
           <h2
