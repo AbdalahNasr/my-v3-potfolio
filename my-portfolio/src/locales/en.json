@@ -260,5 +260,11 @@
     "closeMenu": "Close navigation menu",
     "toggleTheme": "Toggle theme",
     "toggleLanguage": "Toggle language"
+  },
+  "cv": {
+    "title": "My Curriculum Vitae",
+    "scanTitle": "Scan to View My CV",
+    "scanDesc": "Scan this QR code with your mobile device to instantly access my detailed curriculum vitae with complete professional experience, education, and skills.",
+    "openBtn": "Open CV Website"
   }
 }

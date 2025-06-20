@@ -63,7 +63,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark transition-colors duration-300">
+      <body className="bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark transition-colors duration-300" style={{overflow: 'visible', minHeight: '100vh'}}>
+        {/* <div style={{background: 'orange', color: 'black', padding: '1rem', textAlign: 'center', fontWeight: 'bold', fontSize: '2rem', zIndex: 99999999, position: 'relative'}}>LAYOUT TEST: If you see this, layout is rendering</div> */}
         <LanguageProvider>
           <BackgroundCanvas />
           <CustomCursor />

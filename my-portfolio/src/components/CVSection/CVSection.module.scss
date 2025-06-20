@@ -1,0 +1,59 @@
+.cv-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #2b2d2f;
+  min-height: 400px;
+  z-index: 1000;
+  padding: 0;
+}
+
+.dark .cv-section {
+  background: #18181b;
+}
+
+.cv-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 40px rgba(149,76,233,0.12), 0 1.5px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  position: relative;
+  z-index: 10;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.dark .cv-card {
+  background: #23232b;
+  color: #fff;
+  box-shadow: 0 8px 40px rgba(160, 90, 217, 0.18), 0 1.5px 8px rgba(0,0,0,0.18);
+}
+
+.cv-qr {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  margin: 0 auto 0.5rem auto;
+  box-shadow: 0 4px 24px rgba(149,76,233,0.12);
+  border-radius: 1rem;
+  border: 2px solid rgba(149,76,233,0.18);
+}
+
+.cv-glow {
+  position: absolute;
+  inset: -2rem;
+  border-radius: 2.5rem;
+  background: radial-gradient(circle at 60% 40%, #ff6ec4 0%, #7873f5 40%, #4f2cfa 80%, transparent 100%);
+  filter: blur(40px);
+  opacity: 0.95;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.dark .cv-glow {
+  background: radial-gradient(circle at 60% 40%, #b993ff 0%, #6e4cff 40%, #2e1a47 100%, transparent 120%);
+  opacity: 1;
+}

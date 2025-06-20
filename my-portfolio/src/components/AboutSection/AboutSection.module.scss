@@ -4,6 +4,62 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: transparent;
+}
+
+.dark .about {
+}
+
+.about-dark {
   color: inherit;
+}
+
+.dark .about-dark {
+  color: #fff !important;
+}
+
+.gradient-test {
+  width: 16rem;
+  height: 4rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+}
+
+.core-skill {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 15px !important;
+  z-index: 1;
+  overflow: hidden;
+  background: #fff;
+  color: #222;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.dark .core-skill {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.core-skill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(38,41,199,0.66) 0%, rgba(199,87,190,0.86) 50%, rgba(234,83,237,1) 100%);
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 1;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
