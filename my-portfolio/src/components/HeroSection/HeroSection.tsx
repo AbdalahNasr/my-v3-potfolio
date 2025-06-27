@@ -82,8 +82,14 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl  max-w-2xl mb-12 text-gray-600 dark:text-gray-300 parallax-element hero-anim" data-depth="0.05">
             {t.hero.description}
           </p>
-          <a
-            href="#projects"
+          <button
+            type="button"
+            onClick={() => {
+              const el = document.getElementById('projects');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="inline-flex items-center bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 text-white py-3 px-8 rounded-lg font-medium shadow-lg hover:shadow-xl transition duration-300 group parallax-element hero-anim"
             data-depth="0.1"
           >
@@ -101,7 +107,7 @@ export default function HeroSection() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </section>

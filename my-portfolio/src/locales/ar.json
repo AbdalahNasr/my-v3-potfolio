@@ -6,9 +6,9 @@
     "contactMe": "تواصل معي",
     "imageAlt": "رسوم متحركة للبرمجة",
     "greeting": "مرحباً، أنا",
-    "name": "اسمك",
+    "name": "عبدالله نصر",
     "designer": "و مصمم",
-    "description": "مطور شغوف بإنشاء حلول مبتكرة باستخدام التقنيات الحديثة"
+    "description": "مطور ويب متكامل شغوف بتطوير تطبيقات قابلة للتوسع، واجهات حديثة، وحلول مبتكرة."
   },
   "nav": {
     "logo": "محفظة.المطور",
@@ -23,17 +23,17 @@
   "about": {
     "title": "نبذة عني",
     "subtitle": "تعرف علي أكثر",
-    "description": "أنا مطور ويب متكامل شغوف بخبرة في تقنيات الويب الحديثة. أحب إنشاء تطبيقات ف��الة وقابلة للتطوير وسهلة الاستخدام تحل مشاكل العالم الحقيقي.",
+    "description": "أنا مطور ويب متكامل شغوف بخبرة في تقنيات الويب الحديثة. أبني تطبيقات قابلة للتوسع باستخدام React و Next.js و TypeScript و Node.js. أركز في عملي على الأداء، الوصولية، والتصميم الأنيق.",
     "highlights": [
-      "أكثر من 5 سنوات من الخبرة في التطوير",
-      "خبير في React و Next.js و Node.js",
-      "شغوف بالكود النظيف وأفضل الممارسات",
-      "أتعلم دائماً تقنيات جديدة"
+      "أكثر من سنتين خبرة في تطوير الويب المتكامل",
+      "خبير في React و Next.js و TypeScript و Node.js",
+      "كود نظيف، تصميم معياري، وأداء واجهات المستخدم",
+      "أتعلم وأطبق أحدث الممارسات دائماً"
     ],
     "downloadCV": "تحميل السيرة الذاتية",
-    "yearsExperience": "سنوات الخبرة",
-    "projectsCompleted": "المشاريع المكتملة",
-    "happyClients": "العملاء السعداء",
+    "yearsExperience": "أكثر من سنتين خبرة",
+    "projectsCompleted": "أكثر من 10 مشاريع مكتملة",
+    "happyClients": "عملاء سعداء",
     "technologies": "التقنيات المتقنة"
   },
   "skills": {
@@ -67,20 +67,18 @@
       "typescript": "TypeScript",
       "javascript": "JavaScript",
       "nodejs": "Node.js",
+      "Angular": "Angular",
       "express": "Express.js",
       "mongodb": "MongoDB",
       "postgresql": "PostgreSQL",
       "mysql": "MySQL",
       "git": "Git",
-      "docker": "Docker",
-      "aws": "AWS",
       "vercel": "Vercel",
       "tailwind": "Tailwind CSS",
-      "sass": "Sass/SCSS",
-      "python": "Python",
-      "java": "Java",
-      "php": "PHP",
-      "laravel": "Laravel"
+      "sass": "SCSS",
+      "redux": "Redux Toolkit",
+      "postcss": "PostCSS",
+      "cloudinary": "Cloudinary"
     }
   },
   "projects": {
@@ -100,46 +98,135 @@
       "fullstack": "متكامل"
     },
     "projectsList": {
-      "ecommerce": {
-        "title": "منصة التجارة الإلكترونية",
-        "description": "حل تجارة إلكترونية متكامل مع تكامل الدفع وإدارة المخزون ولوحة تحكم الإدارة.",
+      "threads": {
+        "title": "تطبيق Threads",
+        "description": "منصة اجتماعية مع مصادقة، منشورات فورية، وتصميم متجاوب.",
         "category": "fullstack",
-        "technologies": ["Next.js", "Node.js", "MongoDB", "Stripe"],
+        "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
         "features": [
-          "مصادقة وتخويل المستخدمين",
-          "كتالوج المنتجات مع البحث والفلاتر",
-          "عربة التسوق وعملية الدفع",
-          "تكامل الدفع مع Stripe",
-          "لوحة تحكم الإدارة لإدارة المخزون",
-          "تتبع وإدارة الطلبات"
-        ]
+          "مصادقة المستخدمين",
+          "إنشاء وتفاعل مع المنشورات",
+          "توجيه ديناميكي وواجهة متجاوبة",
+          "مستضاف على Vercel"
+        ],
+        "link": "https://threads-4cls.vercel.app/sign-in",
+        "repo": "https://github.com/AbdalahNasr/threads"
       },
-      "taskmanager": {
-        "title": "تطبيق إدارة المهام",
-        "description": "تطبيق إدارة مهام تعاوني مع تحديثات فورية وميزات التعاون الجماعي.",
-        "category": "web",
-        "technologies": ["React", "Firebase", "Material-UI", "Socket.io"],
+      "chatapp": {
+        "title": "واجهة برمجة تطبيقات الدردشة",
+        "description": "خلفية رسائل فورية مع توثيق Swagger.",
+        "category": "api",
+        "technologies": ["Node.js", "Express", "MongoDB", "Socket.IO"],
         "features": [
-          "التعاون في الوقت الفعلي",
-          "تعيين وتتبع المهام",
-          "تنظيم المشاريع",
-          "وظيفة الدردشة الجماعية",
-          "مرفقات الملفات",
-          "تحليلات التقدم"
-        ]
+          "دردشة في الوقت الحقيقي",
+          "مصادقة JWT",
+          "نقاط نهاية RESTful API",
+          "Swagger لتوثيق الواجهة"
+        ],
+        "repo": "https://github.com/AbdalahNasr/chat-engine/tree/main/backend"
+      },
+      "orderfood": {
+        "title": "تطبيق طلب الطعام",
+        "description": "منصة لطلب الطعام مع دعم متعدد اللغات ولوحة تحكم إدارية.",
+        "category": "fullstack",
+        "technologies": ["Next.js", "Prisma", "Tailwind CSS", "NextAuth", "Redux Toolkit"],
+        "features": [
+          "إدارة المنتجات للإدارة",
+          "توجيه متعدد اللغات",
+          "مصادقة باستخدام NextAuth",
+          "رفع الصور عبر Cloudinary"
+        ],
+        "repo": "https://github.com/AbdalahNasr/order-food-app"
+      },
+      "weather": {
+        "title": "تطبيق الطقس",
+        "description": "تطبيق بسيط لتوقعات الطقس باستخدام البحث حسب المدينة.",
+        "category": "web",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [
+          "بحث حسب المدينة",
+          "بيانات طقس فورية",
+          "واجهة نظيفة ومتجاوبة"
+        ],
+        "link": "https://abdalahnasr.github.io/weatherApp/",
+        "repo": "https://github.com/AbdalahNasr/weatherApp"
+      },
+      "profilecard": {
+        "title": "بطاقة الملف الشخصي المتحركة",
+        "description": "بطاقة ملف شخصي متحركة إبداعية باستخدام CSS.",
+        "category": "web",
+        "technologies": ["HTML", "CSS"],
+        "features": [
+          "حركات CSS",
+          "تصميم متجاوب"
+        ],
+        "link": "https://abdalahnasr.github.io/koroi-neko-profile/",
+        "repo": "https://github.com/AbdalahNasr/koroi-neko-profile"
+      },
+      "recipes": {
+        "title": "وصفات شهية",
+        "description": "موقع وصفات قابل للبحث باستخدام API عامة للمكونات الغذائية.",
+        "category": "web",
+        "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+        "features": [
+          "بحث بالمكونات",
+          "تكامل مع API",
+          "واجهة تفاعلية"
+        ],
+        "link": "https://abdalahnasr.github.io/recipes/",
+        "repo": "https://abdalahnasr.github.io/recipes"
+      },
+      "ecommercedemo": {
+        "title": "عرض التجارة الإلكترونية",
+        "description": "عرض أمامي بسيط للتجارة الإلكترونية باستخدام React.",
+        "category": "web",
+        "technologies": ["React", "JavaScript"],
+        "features": [
+          "إضافة إلى السلة",
+          "تخطيط المنتجات",
+          "تدفق سلة بسيط"
+        ],
+        "link": "https://abdalahnasr.github.io/E-commerce-demo/",
+        "repo": "https://abdalahnasr.github.io/E-commerce-demo"
+      },
+      "angularEcommerce": {
+        "title": "تطبيق Angular للتجارة الإلكترونية",
+        "description": "تطبيق تجارة إلكترونية متجاوب مبني بـ Angular مع تصفية المنتجات، إدارة السلة، وتدفق الدفع الكامل.",
+        "category": "fullstack",
+        "technologies": ["Angular", "TypeScript", "SCSS", "Bootstrap", "Vercel"],
+        "features": [
+          "عرض المنتجات مع الفلاتر",
+          "سلة التسوق وتحديث الكميات",
+          "واجهة دفع متجاوبة",
+          "التحقق من النماذج والمصادقة",
+          "نشر عبر Vercel"
+        ],
+        "link": "abdalahnasrs-projects/ng-r-ecommerce-kmjz",
+        "repo": "https://github.com/AbdalahNasr/ng-r-ecommerce"
+      },
+      "quizapp": {
+        "title": "تطبيق اختبار ISTQP",
+        "description": "تطبيق اختبار متعدد اللغات مبني بـ Next.js.",
+        "category": "web",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS"],
+        "features": [
+          "SSR و SSG",
+          "وضع مظلم/فاتح",
+          "SCSS معياري",
+          "تكامل qs.json"
+        ],
+        "link": "istqp-quiz.vercel.app",
+        "repo": "https://github.com/AbdalahNasr/istqp-quiz"
       },
       "portfolio": {
-        "title": "موقع المحفظة",
-        "description": "موقع محفظة حديث ومتجاوب مع الوضع المظلم والرسوم المتحركة والدعم متعدد اللغات.",
+        "title": "المحفظة v3",
+        "description": "موقع محفظة شخصي مع دعم متعدد اللغات، حركات سلسة، وتبديل المظهر.",
         "category": "web",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SCSS Modules"],
         "features": [
-          "تصميم متجاوب",
-          "تبديل الوضع المظلم/الفاتح",
-          "رسوم متحركة سلسة",
-          "دعم متعدد اللغات",
-          "تكامل نموذج الاتصال",
-          "محسن لمحركات البحث"
+          "Context API للمظهر/اللغة",
+          "Hooks وحركات مخصصة",
+          "واجهة مكونة متجاوبة"
         ]
       }
     }
@@ -194,6 +281,18 @@
     "title": "تواصل معي",
     "subtitle": "لنعمل معاً",
     "description": "أنا دائماً مهتم بالفرص الجديدة والمشاريع المثيرة. لا تتردد في التواصل إذا كنت تريد التعاون!",
+    "email": {
+      "text": "body16nasr16bn@gmail.com",
+      "link": "mailto:body16nasr16bn@gmail.com"
+    },
+    "github": {
+      "text": "github.com/AbdalahNasr",
+      "link": "https://github.com/AbdalahNasr"
+    },
+    "linkedin": {
+      "text": "linkedin.com/in/AbdalahNasr",
+      "link": "https://www.linkedin.com/in/abdalah-nasr-63a9a5266/"
+    },
     "form": {
       "name": "اسمك",
       "email": "بريدك الإلكتروني",

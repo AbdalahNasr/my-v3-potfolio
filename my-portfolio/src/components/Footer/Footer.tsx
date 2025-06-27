@@ -15,7 +15,7 @@ export default function Footer() {
             {t.footer?.logo || 'Dev.Portfolio'}
           </div>
           <div className={`flex items-center ${lang === 'ar' ? 'space-x-reverse space-x-6' : 'space-x-6'}`} style={lang === 'ar' ? {direction: 'rtl'} : {}}>
-            <a href="https://example.com/cv" target="_blank" rel="noopener noreferrer"
+            <a href="https://cv-website-version.vercel.app/" target="_blank" rel="noopener noreferrer"
               className="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition duration-300">
               <span className={lang === 'ar' ? 'ml-2' : 'mr-2'}>{t.footer?.cv || 'My CV'}</span>
               <i className="fas fa-file-alt"></i>

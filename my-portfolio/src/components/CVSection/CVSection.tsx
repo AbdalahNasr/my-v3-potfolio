@@ -54,7 +54,7 @@ export default function CVSection() {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white drop-shadow-md parallax-element" data-depth="0.05">{t.cv?.scanTitle || 'Scan to View My CV'}</h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 drop-shadow-sm parallax-element" data-depth="0.03">{t.cv?.scanDesc || 'Scan this QR code with your mobile device to instantly access my detailed curriculum vitae with complete professional experience, education, and skills.'}</p>
             <div className="pt-4">
-              <a href="https://example.com/cv" target="_blank" rel="noopener noreferrer"
+              <a href="https://cv-website-version.vercel.app/" target="_blank" rel="noopener noreferrer"
                 className="interactive inline-block bg-primary-light dark:bg-primary-dark text-white py-3 px-8 rounded-lg font-medium shadow-lg hover:shadow-xl transition duration-300">
                 {t.cv?.openBtn || 'Open CV Website'}
                 <i className="fas fa-external-link-alt ml-2"></i>

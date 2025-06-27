@@ -109,20 +109,39 @@ export default function ContactSection() {
           style={lang === 'ar' ? {direction: 'rtl'} : {}}
           data-depth="0.01"
         >
-          <a href="mailto:body16nasr16bn@gmail.com" className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`} style={lang === 'ar' ? {direction: 'rtl'} : {}}>
-            {lang === 'ar' ? <span>{contact.email || 'body16nasr16bn@gmail.com'}</span> : null}
+          {/* Email */}
+          <a
+            href={contact.email?.link || 'mailto:body16nasr16bn@gmail.com'}
+            className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`}
+            style={lang === 'ar' ? {direction: 'rtl'} : {}}
+          >
+            {lang === 'ar' ? <span>{contact.email?.text || 'body16nasr16bn@gmail.com'}</span> : null}
             <i className="fas fa-envelope"></i>
-            {lang !== 'ar' ? <span>{contact.email || 'body16nasr16bn@gmail.com'}</span> : null}
+            {lang !== 'ar' ? <span>{contact.email?.text || 'body16nasr16bn@gmail.com'}</span> : null}
           </a>
-          <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`} style={lang === 'ar' ? {direction: 'rtl'} : {}}>
-            {lang === 'ar' ? <span>github.com/username</span> : null}
+          {/* GitHub */}
+          <a
+            href={contact.github?.link || 'https://github.com/AbdalahNasr'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`}
+            style={lang === 'ar' ? {direction: 'rtl'} : {}}
+          >
+            {lang === 'ar' ? <span>{contact.github?.text || 'github.com/AbdalahNasr'}</span> : null}
             <i className="fab fa-github"></i>
-            {lang !== 'ar' ? <span>github.com/username</span> : null}
+            {lang !== 'ar' ? <span>{contact.github?.text || 'github.com/AbdalahNasr'}</span> : null}
           </a>
-          <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`} style={lang === 'ar' ? {direction: 'rtl'} : {}}>
-            {lang === 'ar' ? <span>linkedin.com/in/username</span> : null}
+          {/* LinkedIn */}
+          <a
+            href={contact.linkedin?.link || 'https://www.linkedin.com/in/abdalah-nasr-63a9a5266/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-2 text-lg dark:text-white text-gray-700 hover:text-primary-light dark:hover:text-primary-dark transition${lang === 'ar' ? ' flex-row-reverse' : ''}`}
+            style={lang === 'ar' ? {direction: 'rtl'} : {}}
+          >
+            {lang === 'ar' ? <span>{contact.linkedin?.text || 'linkedin.com/in/AbdalahNasr'}</span> : null}
             <i className="fab fa-linkedin"></i>
-            {lang !== 'ar' ? <span>linkedin.com/in/username</span> : null}
+            {lang !== 'ar' ? <span>{contact.linkedin?.text || 'linkedin.com/in/AbdalahNasr'}</span> : null}
           </a>
         </div>
       </div>
