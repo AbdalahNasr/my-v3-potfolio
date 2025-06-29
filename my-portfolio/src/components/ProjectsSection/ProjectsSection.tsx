@@ -93,6 +93,37 @@ const ProjectsSection: React.FC = () => {
 	const projectsList = t.projects.projectsList;
 	const projectKeys = Object.keys(projectsList);
 
+	// Create refs for each card
+	const cardRefs = React.useMemo(() => projectKeys.map(() => React.createRef<HTMLDivElement>()), [projectKeys.length]);
+
+	React.useEffect(() => {
+		cardRefs.forEach((ref) => {
+			const el = ref.current;
+			if (!el) return;
+			const handleMove = (e: MouseEvent) => {
+				const rect = el.getBoundingClientRect();
+				const x = e.clientX - rect.left;
+				const y = e.clientY - rect.top;
+				const centerX = rect.width / 2;
+				const centerY = rect.height / 2;
+				const rotateX = ((y - centerY) / centerY) * 10;
+				const rotateY = ((x - centerX) / centerX) * 10;
+				el.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+				el.style.boxShadow = `0 12px 40px 0 rgba(0,0,0,0.18), 0 0 32px 2px rgba(80,180,255,0.12)`;
+			};
+			const handleLeave = () => {
+				el.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+				el.style.boxShadow = "";
+			};
+			el.addEventListener("mousemove", handleMove);
+			el.addEventListener("mouseleave", handleLeave);
+			return () => {
+				el.removeEventListener("mousemove", handleMove);
+				el.removeEventListener("mouseleave", handleLeave);
+			};
+		});
+	}, [cardRefs]);
+
 	return (
 		<section
 			id="projects"
@@ -162,14 +193,12 @@ const ProjectsSection: React.FC = () => {
 				>
 					{projectKeys.map((key, idx) => {
 						const project = projectsList[key];
-						const cardRef = useCardParallax();
-						// fallback to demo images if you want to keep the visuals
 						const image = projectImages[idx] || projectImages[0];
 						return (
 							<div
 								key={project.title}
 								className="project-card"
-								ref={cardRef}
+								ref={cardRefs[idx]}
 								style={{
 									borderRadius: 15,
 									padding: "2rem 1.5rem 1.5rem 1.5rem",
