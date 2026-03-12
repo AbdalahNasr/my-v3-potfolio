@@ -102,7 +102,12 @@
         "title": "تطبيق Threads",
         "description": "منصة اجتماعية مع مصادقة، منشورات فورية، وتصميم متجاوب.",
         "category": "fullstack",
-        "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "TypeScript",
+          "Node.js"
+        ],
         "features": [
           "مصادقة المستخدمين",
           "إنشاء وتفاعل مع المنشورات",
@@ -110,124 +115,159 @@
           "مستضاف على Vercel"
         ],
         "link": "https://threads-4cls.vercel.app/sign-in",
-        "repo": "https://github.com/AbdalahNasr/threads"
+        "repo": "https://github.com/AbdalahNasr/threads",
+        "image": "/threads.png"
       },
       "chatapp": {
         "title": "واجهة برمجة تطبيقات الدردشة",
         "description": "خلفية رسائل فورية مع توثيق Swagger.",
         "category": "api",
-        "technologies": ["Node.js", "Express", "MongoDB", "Socket.IO"],
+        "technologies": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Socket.IO"
+        ],
         "features": [
           "دردشة في الوقت الحقيقي",
           "مصادقة JWT",
           "نقاط نهاية RESTful API",
           "Swagger لتوثيق الواجهة"
         ],
-        "repo": "https://github.com/AbdalahNasr/chat-engine/tree/main/backend"
+        "repo": "https://github.com/AbdalahNasr/chat-engine/tree/main/backend",
+        "image": "/chat.webp"
       },
       "orderfood": {
         "title": "تطبيق طلب الطعام",
         "description": "منصة لطلب الطعام مع دعم متعدد اللغات ولوحة تحكم إدارية.",
         "category": "fullstack",
-        "technologies": ["Next.js", "Prisma", "Tailwind CSS", "NextAuth", "Redux Toolkit"],
+        "technologies": [
+          "Next.js",
+          "Prisma",
+          "Tailwind CSS",
+          "NextAuth",
+          "Redux Toolkit"
+        ],
         "features": [
           "إدارة المنتجات للإدارة",
           "توجيه متعدد اللغات",
           "مصادقة باستخدام NextAuth",
           "رفع الصور عبر Cloudinary"
         ],
-        "repo": "https://github.com/AbdalahNasr/order-food-app"
+        "repo": "https://github.com/AbdalahNasr/order-food-app",
+        "image": "/order-food.png"
       },
       "weather": {
         "title": "تطبيق الطقس",
         "description": "تطبيق بسيط لتوقعات الطقس باستخدام البحث حسب المدينة.",
         "category": "web",
-        "technologies": ["HTML", "CSS", "JavaScript"],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
         "features": [
           "بحث حسب المدينة",
           "بيانات طقس فورية",
           "واجهة نظيفة ومتجاوبة"
         ],
         "link": "https://abdalahnasr.github.io/weatherApp/",
-        "repo": "https://github.com/AbdalahNasr/weatherApp"
+        "repo": "https://github.com/AbdalahNasr/weatherApp",
+        "image": "/weather.png"
       },
       "profilecard": {
         "title": "بطاقة الملف الشخصي المتحركة",
         "description": "بطاقة ملف شخصي متحركة إبداعية باستخدام CSS.",
         "category": "web",
-        "technologies": ["HTML", "CSS"],
+        "technologies": [
+          "HTML",
+          "CSS"
+        ],
         "features": [
           "حركات CSS",
-          "تصميم متجاوب"
+          "تصميم متجاو��"
         ],
         "link": "https://abdalahnasr.github.io/koroi-neko-profile/",
-        "repo": "https://github.com/AbdalahNasr/koroi-neko-profile"
+        "repo": "https://github.com/AbdalahNasr/koroi-neko-profile",
+        "image": "/profilecard.png"
       },
       "recipes": {
         "title": "وصفات شهية",
         "description": "موقع وصفات قابل للبحث باستخدام API عامة للمكونات الغذائية.",
         "category": "web",
-        "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "Bootstrap",
+          "JavaScript"
+        ],
         "features": [
           "بحث بالمكونات",
-          "تكامل مع API",
-          "واجهة تفاعلية"
+          "تفاصيل الوصفات",
+          "تصميم متجاوب"
         ],
         "link": "https://abdalahnasr.github.io/recipes/",
-        "repo": "https://abdalahnasr.github.io/recipes"
+        "repo": "https://abdalahnasr.github.io/recipes",
+        "image": "/yummy.png"
       },
       "ecommercedemo": {
-        "title": "عرض التجارة الإلكترونية",
+        "title": "عرض React للتجارة الإلكترونية",
         "description": "عرض أمامي بسيط للتجارة الإلكترونية باستخدام React.",
         "category": "web",
-        "technologies": ["React", "JavaScript"],
+        "technologies": [
+          "React",
+          "JavaScript"
+        ],
         "features": [
           "إضافة إلى السلة",
           "تخطيط المنتجات",
           "تدفق سلة بسيط"
         ],
         "link": "https://abdalahnasr.github.io/E-commerce-demo/",
-        "repo": "https://abdalahnasr.github.io/E-commerce-demo"
+        "repo": "https://abdalahnasr.github.io/E-commerce-demo",
+        "image": "/React-Ecommerce.png"
       },
       "angularEcommerce": {
-        "title": "تطبيق Angular للتجارة الإلكترونية",
-        "description": "تطبيق تجارة إلكترونية متجاوب مبني بـ Angular مع تصفية المنتجات، إدارة السلة، وتدفق الدفع الكامل.",
+        "title": "تطبيق التجارة الإلكترونية بـ Angular",
+        "description": "تطبيق تجارة إلكترونية مستجيب مبني بـ Angular مع تصفية المنتجات، إدارة السلة، وتدفق دفع كامل.",
         "category": "fullstack",
-        "technologies": ["Angular", "TypeScript", "SCSS", "Bootstrap", "Vercel"],
+        "technologies": [
+          "Angular",
+          "TypeScript",
+          "SCSS",
+          "Bootstrap",
+          "Vercel"
+        ],
         "features": [
-          "عرض المنتجات مع الفلاتر",
+          "عرض المنتجات مع فلاتر",
           "سلة التسوق وتحديث الكميات",
           "واجهة دفع متجاوبة",
-          "التحقق من النماذج والمصادقة",
+          "تحقق من النماذج والمصادقة",
           "نشر عبر Vercel"
         ],
-        "link": "abdalahnasrs-projects/ng-r-ecommerce-kmjz",
-        "repo": "https://github.com/AbdalahNasr/ng-r-ecommerce"
+        "link": "https://ng-r-ecommerce-wgnh.vercel.app",
+        "repo": "https://github.com/AbdalahNasr/ng-r-ecommerce",
+        "image": "/ng-ecommerce-home.png"
       },
       "quizapp": {
-        "title": "تطبيق اختبار ISTQP",
-        "description": "تطبيق اختبار متعدد اللغات مبني بـ Next.js.",
+        "title": "تطبيق اختبارات ISTQP",
+        "description": "تطبيق اختبارات متعدد اللغات مبني بـ Next.js.",
         "category": "web",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS"],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "PostCSS"
+        ],
         "features": [
           "SSR و SSG",
-          "وضع مظلم/فاتح",
-          "SCSS معياري",
+          "الوضع الداكن/الفاتح",
+          "SCSS معيارية",
           "تكامل qs.json"
         ],
-        "link": "istqp-quiz.vercel.app",
-        "repo": "https://github.com/AbdalahNasr/istqp-quiz"
-      },
-      "portfolio": {
-        "title": "المحفظة v3",
-        "description": "موقع محفظة شخصي مع دعم متعدد اللغات، حركات سلسة، وتبديل المظهر.",
-        "category": "web",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SCSS Modules"],
-        "features": [
-          "Context API للمظهر/اللغة",
-          "Hooks وحركات مخصصة",
-          "واجهة مكونة متجاوبة"
-        ]
+        "link": "https://istqp-quiz.vercel.app",
+        "repo": "https://github.com/AbdalahNasr/istqp-quiz",
+        "image": "/istqp.png"
       }
     }
   },
@@ -243,10 +283,10 @@
         "location": "عن بُعد",
         "description": "قيادة تطوير تطبيقات الويب للمؤسسات باستخدام React و Node.js وتقنيات السحابة.",
         "achievements": [
-          "قدت فريقاً من 5 مطورين في بناء بوابة العملاء",
+          "قدت فريقاً من 5 مطورين في بناء بواب�� العملاء",
           "حسنت أداء التطبيق بنسبة 40%",
           "نفذت خطوط أنابيب CI/CD مما قلل وقت النشر بنسبة 60%",
-          "أرشدت المطورين المبتدئين وأجريت مرا��عات الكود"
+          "أرشدت المطورين المبتدئين وأجريت مراجعات الكود"
         ]
       },
       {
@@ -329,7 +369,7 @@
     "tryAgain": "حاول مرة أخرى",
     "close": "إغلاق",
     "open": "فتح",
-    "menu": "القائمة",
+    "menu": "القائم��",
     "darkMode": "الوضع المظلم",
     "lightMode": "الوضع الفاتح",
     "language": "اللغة",
@@ -358,12 +398,12 @@
     "openMenu": "فتح قائمة التنقل",
     "closeMenu": "إغلاق قائمة التنقل",
     "toggleTheme": "تبديل المظهر",
-    "toggleLanguage": "تبديل اللغة"
+    "toggleLanguage": "تبدي�� اللغة"
   },
   "cv": {
     "title": "سيرتي الذاتية",
     "scanTitle": "امسح لعرض سيرتي الذاتية",
-    "scanDesc": "امسح رمز الاستجابة السريعة هذا بجهازك المحمول للوصول الفوري إلى سيرتي الذاتية التفصيلية مع الخبرة المهنية الكاملة والتعليم والمهارات.",
+    "scanDesc": "امسح رمز الاستجابة السريعة هذا بجهازك المحمول للوصول ال��وري إلى سيرتي الذاتية التفصيلية مع الخبرة المهنية الكاملة والتعليم والمهارات.",
     "openBtn": "افتح موقع السيرة الذاتية"
   }
 }

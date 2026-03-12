@@ -1,14 +1,9 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from 'next/image';
 import { useLanguage } from "../LanguageToggle/LanguageContext";
 import styles from './ProjectsSection.module.scss';
-
-const projectImages = [
-	"https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg",
-	"https://cdn.pixabay.com/photo/2018/03/27/12/16/analytics-3265840_1280.jpg",
-	"https://cdn.pixabay.com/photo/2017/12/29/12/07/mobile-phone-3047321_1280.jpg"
-];
 
 const cardColors = [
 	{
@@ -193,7 +188,7 @@ const ProjectsSection: React.FC = () => {
 				>
 					{projectKeys.map((key, idx) => {
 						const project = projectsList[key];
-						const image = projectImages[idx] || projectImages[0];
+						const image = project.image || "/default.png";
 						return (
 							<div
 								key={project.title}
@@ -215,18 +210,15 @@ const ProjectsSection: React.FC = () => {
 										"background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s",
 								}}
 							>
-								<img
-									src={image}
-									alt={project.title}
-									style={{
-										width: "100%",
-										height: 160,
-										objectFit: "cover",
-										borderRadius: 12,
-										marginBottom: 16,
-										boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-									}}
-								/>
+								<div style={{ position: 'relative', width: '100%', height: 160, marginBottom: 16, borderRadius: 12, overflow: 'hidden', boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
+									<Image
+										src={image}
+										alt={project.title}
+										fill
+										style={{ objectFit: "cover" }}
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									/>
+								</div>
 								<h3
 									style={{
 										fontSize: "1.5rem",

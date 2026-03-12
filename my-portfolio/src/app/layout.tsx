@@ -1,16 +1,36 @@
 import type { Metadata } from 'next';
 import './globals.scss';
-import BackgroundCanvas from '../components/BackgroundCanvas/BackgroundCanvas';
-import CustomCursor from '../components/CustomCursor/CustomCursor';
-import ScrollbarIndicator from '../components/ScrollbarIndicator/ScrollbarIndicator';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { LanguageProvider } from '../components/LanguageToggle/LanguageContext';
+import { BackgroundCanvas, CustomCursor, ScrollbarIndicator, HelpDesk } from '../components/DynamicComponents';
 
-export const metadata: Metadata = {
-  title: 'Modern Portfolio | 2025',
-  description: 'Building modern web applications with cutting-edge technologies',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Modern Portfolio | 2025',
+    description: 'Building modern web applications with cutting-edge technologies',
+    openGraph: {
+      title: 'Modern Portfolio | 2025',
+      description: 'Building modern web applications with cutting-edge technologies',
+      url: 'https://yourportfolio.com',
+      siteName: 'Portfolio',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Modern Portfolio | 2025',
+      description: 'Building modern web applications with cutting-edge technologies',
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -71,6 +91,7 @@ export default function RootLayout({
           <ScrollbarIndicator />
           <Navbar />
           {children}
+          <HelpDesk />
           <Footer />
         </LanguageProvider>
       </body>

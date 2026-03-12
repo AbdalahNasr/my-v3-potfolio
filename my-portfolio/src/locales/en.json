@@ -115,7 +115,8 @@
           "Deployed on Vercel"
         ],
         "link": "https://threads-4cls.vercel.app/sign-in",
-        "repo": "https://github.com/AbdalahNasr/threads"
+        "repo": "https://github.com/AbdalahNasr/threads",
+        "image": "/threads.png"
       },
       "chatapp": {
         "title": "Chat App API",
@@ -133,7 +134,8 @@
           "RESTful API endpoints",
           "Swagger for API docs"
         ],
-        "repo": "https://github.com/AbdalahNasr/chat-engine/tree/main/backend"
+        "repo": "https://github.com/AbdalahNasr/chat-engine/tree/main/backend",
+        "image": "/chat.webp"
       },
       "orderfood": {
         "title": "Order-Food App",
@@ -152,7 +154,8 @@
           "Authentication with NextAuth",
           "Cloudinary image uploads"
         ],
-        "repo": "https://github.com/AbdalahNasr/order-food-app"
+        "repo": "https://github.com/AbdalahNasr/order-food-app",
+        "image": "/order-food.png"
       },
       "weather": {
         "title": "Weather App",
@@ -169,7 +172,8 @@
           "Clean and responsive UI"
         ],
         "link": "https://abdalahnasr.github.io/weatherApp/",
-        "repo": "https://github.com/AbdalahNasr/weatherApp"
+        "repo": "https://github.com/AbdalahNasr/weatherApp",
+        "image": "/weather.png"
       },
       "profilecard": {
         "title": "Animated Profile Card",
@@ -184,7 +188,8 @@
           "Responsive design"
         ],
         "link": "https://abdalahnasr.github.io/koroi-neko-profile/",
-        "repo": "https://github.com/AbdalahNasr/koroi-neko-profile"
+        "repo": "https://github.com/AbdalahNasr/koroi-neko-profile",
+        "image": "/profilecard.png"
       },
       "recipes": {
         "title": "Yummy Recipes",
@@ -198,11 +203,12 @@
         ],
         "features": [
           "Ingredient search",
-          "API integration",
-          "Interactive UI"
+          "Recipe details",
+          "Responsive design"
         ],
         "link": " https://abdalahnasr.github.io/recipes/",
-        "repo": " https://abdalahnasr.github.io/recipes"
+        "repo": " https://abdalahnasr.github.io/recipes",
+        "image": "/yummy.png"
       },
       "ecommercedemo": {
         "title": "React-E-commerce Demo",
@@ -218,7 +224,8 @@
           "Simple cart flow"
         ],
         "link": " https://abdalahnasr.github.io/E-commerce-demo/",
-        "repo": " https://abdalahnasr.github.io/E-commerce-demo"
+        "repo": " https://abdalahnasr.github.io/E-commerce-demo",
+        "image":"/React-Ecommerce.png"
       },
       "angularEcommerce": {
         "title": "Angular E-Commerce App",
@@ -238,8 +245,9 @@
           "Form validation and authentication",
           "Deployment via Vercel"
         ],
-        "link": "abdalahnasrs-projects/ng-r-ecommerce-kmjz",
-        "repo": "https://github.com/AbdalahNasr/ng-r-ecommerce"
+        "link": "https://ng-r-ecommerce-wgnh.vercel.app",
+        "repo": "https://github.com/AbdalahNasr/ng-r-ecommerce",
+        "image":"/ng-ecommerce-home.png"
       },
       "quizapp": {
         "title": "ISTQP Quiz App",
@@ -257,10 +265,11 @@
           "Modular SCSS",
           "qs.json integration"
         ],
-        "link": "istqp-quiz.vercel.app",
-        "repo": "https://github.com/AbdalahNasr/istqp-quiz"
+        "link": "https://istqp-quiz.vercel.app",
+        "repo": "https://github.com/AbdalahNasr/istqp-quiz",
+        "image":"/istqp.png"
       }
-        }
+    }
   },
   "experience": {
     "title": "Work Experience",
