@@ -1,26 +1,29 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useChat } from 'ai/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './HelpDesk.module.scss';
 import { useLanguage } from '../LanguageToggle/LanguageContext';
+
+interface Message {
+  id: string;
+  role: 'user' | 'assistant';
+  content: string;
+}
 
 export default function HelpDesk() {
   const [isOpen, setIsOpen] = useState(false);
   const { lang } = useLanguage();
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  const { messages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
-    api: '/api/chat',
-    initialMessages: [
-      {
-        id: 'welcome',
-        role: 'assistant',
-        content: lang === 'ar' ? 'مرحباً! أنا مساعد الذكاء الاصطناعي لـ عبدالله. كيف يمكنني مساعدتك؟' : 'Hi! I am Abdallah\'s AI assistant. How can I help you today?',
-      }
-    ]
-  });
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: 'welcome',
+      role: 'assistant',
+      content: lang === 'ar' ? 'مرحباً! أنا مساعد الذكاء الاصطناعي لـ عبدالله. كيف يمكنني مساعدتك؟' : 'Hi! I am Abdallah\'s AI assistant. How can I help you today?',
+    }
+  ]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -44,8 +47,72 @@ export default function HelpDesk() {
     'How can I contact him?'
   ];
 
+  const sendMessage = async (content: string) => {
+    if (!content.trim()) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      content
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage]
+        })
+      });
+
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error('No reader available');
+
+      let assistantMessage = '';
+      const assistantId = (Date.now() + 1).toString();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const text = new TextDecoder().decode(value);
+        assistantMessage += text;
+        
+        setMessages(prev => {
+          const exists = prev.find(m => m.id === assistantId);
+          if (exists) {
+            return prev.map(m => m.id === assistantId ? { ...m, content: assistantMessage } : m);
+          } else {
+            return [...prev, { id: assistantId, role: 'assistant', content: assistantMessage }];
+          }
+        });
+      }
+    } catch (error) {
+      console.error('Chat error:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: lang === 'ar' ? 'عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Sorry, an error occurred. Please try again.'
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleSuggestionClick = (question: string) => {
-    append({ role: 'user', content: question });
+    sendMessage(question);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    sendMessage(input);
   };
 
   return (
@@ -116,7 +183,7 @@ export default function HelpDesk() {
             <form onSubmit={handleSubmit} className={styles.inputForm}>
               <input
                 value={input}
-                onChange={handleInputChange}
+                onChange={(e) => setInput(e.target.value)}
                 placeholder={lang === 'ar' ? 'اكتب رسالتك...' : 'Type a message...'}
                 className={styles.input}
                 aria-label="Chat input"

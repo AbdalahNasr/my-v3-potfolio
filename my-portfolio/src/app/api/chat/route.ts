@@ -1,14 +1,6 @@
-import { NextRequest } from 'next/server';
-import { streamText } from 'ai';
-import { createOpenAI } from '@ai-sdk/openai';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
-
-// Configure Groq via OpenAI-compatible API
-const groq = createOpenAI({
-  baseURL: 'https://api.groq.com/openai/v1',
-  apiKey: process.env.GROQ_API_KEY,
-});
 
 
 const modelName = 'llama-3.3-70b-versatile';
@@ -106,44 +98,68 @@ export async function POST(req: NextRequest) {
     const { messages } = body ?? {};
 
     console.log('Chat request received with messages:', messages?.length);
-    console.log('API Key present:', !!process.env.GROQ_API_KEY);
 
     if (!Array.isArray(messages)) {
-      return new Response(JSON.stringify({ error: 'Invalid payload: messages must be an array' }), {
-        status: 400,
-        headers: { 'content-type': 'application/json' },
-      });
+      return NextResponse.json({ error: 'Invalid payload: messages must be an array' }, { status: 400 });
     }
 
     if (!process.env.GROQ_API_KEY) {
       console.error('GROQ_API_KEY is not set');
-      return new Response(JSON.stringify({ error: 'API key not configured' }), {
-        status: 500,
-        headers: { 'content-type': 'application/json' },
-      });
+      return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
     }
 
+    const modelName = 'llama-3.3-70b-versatile';
     console.log('Calling Groq with model:', modelName);
-    const result = await streamText({
-      model: groq(modelName),
-      system: PORTFOLIO_CONTEXT,
-      messages,
-      temperature: 0.4,
+
+    // Call Groq API directly
+    const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: modelName,
+        messages: [
+          {
+            role: 'system',
+            content: PORTFOLIO_CONTEXT
+          },
+          ...messages
+        ],
+        temperature: 0.4,
+        stream: false,
+      })
     });
 
-    console.log('Groq response initiated');
-    return result.toDataStreamResponse();
+    if (!groqResponse.ok) {
+      const error = await groqResponse.text();
+      console.error('Groq API error:', error);
+      return NextResponse.json({ error: 'Groq API error' }, { status: groqResponse.status });
+    }
+
+    const data = await groqResponse.json() as any;
+    const text = data.choices?.[0]?.message?.content || 'No response';
+    
+    console.log('Groq response received');
+    
+    // Return as plain text stream
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      start(controller) {
+        controller.enqueue(encoder.encode(text));
+        controller.close();
+      }
+    });
+
+    return new NextResponse(stream, {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+      }
+    });
   } catch (err: any) {
-    console.error('Groq chat route error:', err);
-    console.error('Error details:', {
-      message: err?.message,
-      status: err?.status,
-      code: err?.code,
-    });
+    console.error('Chat route error:', err);
     const message = err?.message ?? 'Internal Server Error';
-    return new Response(JSON.stringify({ error: message }), {
-      status: 500,
-      headers: { 'content-type': 'application/json' },
-    });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
