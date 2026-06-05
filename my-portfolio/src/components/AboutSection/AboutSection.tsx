@@ -1,8 +1,11 @@
 "use client";
 
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import styles from './AboutSection.module.scss';
 import { useLanguage } from '../LanguageToggle/LanguageContext';
+import en from '../../locales/en.json';
+import ar from '../../locales/ar.json';
 
 export default function AboutSection() {
   const { lang } = useLanguage();
@@ -43,7 +46,7 @@ export default function AboutSection() {
   }, []);
 
   // Import locale JSON dynamically
-  const locale = lang === 'ar' ? require('../../locales/ar.json') : require('../../locales/en.json');
+  const locale = lang === 'ar' ? ar : en;
   const about = locale.about;
   const direction = lang === 'ar' ? 'rtl' : 'ltr';
 
@@ -57,8 +60,19 @@ export default function AboutSection() {
       id="about"
     >
       <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-12">
-        <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
-          <img src="/programming-illustration.svg" alt="About Illustration" className="max-w-xs md:max-w-sm rounded-lg shadow-xl parallax-element" data-depth="0.1" style={{boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0'}} />
+        <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0 parallax-element" data-depth="0.1">
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 rounded-lg blur-md opacity-50" />
+            <div className="relative rounded-lg shadow-xl overflow-hidden" style={{ boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0' }}>
+              <Image
+                src="/Programming.gif"
+                alt={locale.hero.imageAlt}
+                width={320}
+                height={320}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
           <h2

@@ -55,7 +55,7 @@ export default function HeroSection() {
       />
       <div
         className="absolute inset-0 z-[1]"
-        style={{ background: 'linear-gradient(to bottom, rgba(5,8,16,0.75), rgba(5,8,16,0.9))' }}
+        style={{ background: 'linear-gradient(to bottom, rgba(5,8,16,0.3), rgba(5,8,16,0.5))' }}
       />
       <div className="relative z-[2] w-full max-w-5xl px-4 md:px-12 flex flex-col items-start justify-center">
         <div className="hero-content">
