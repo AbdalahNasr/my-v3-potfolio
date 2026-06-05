@@ -228,6 +228,23 @@ const ProjectsSection: React.FC = () => {
 								>
 									{project.title}
 								</h3>
+								{'badge' in project && project.badge && (
+									<span
+										style={{
+											display: 'inline-block',
+											marginBottom: 8,
+											background: theme === 'dark' ? 'rgba(124,58,237,0.2)' : 'rgba(124,58,237,0.1)',
+											color: theme === 'dark' ? '#c4b5fd' : '#6d28d9',
+											border: '1px solid rgba(124,58,237,0.35)',
+											borderRadius: 8,
+											padding: '2px 10px',
+											fontSize: 12,
+											fontWeight: 600,
+										}}
+									>
+										{project.badge}
+									</span>
+								)}
 								<p
 									style={{
 										fontSize: "1.1rem",
@@ -381,9 +398,9 @@ const ProjectsSection: React.FC = () => {
 						  GitHub
 						</a>
 					  </div>
-					) : (
+					) : (project.link || project.repo) ? (
 					  <a
-						href={project.repo || project.link || "#ok"}
+						href={project.repo || project.link}
 						target="_blank"
 						rel="noopener noreferrer"
 						style={{
@@ -426,7 +443,7 @@ const ProjectsSection: React.FC = () => {
 						</svg>
 						GitHub
 					  </a>
-					)}
+					) : null}
 							</div>
 						);
 					})}

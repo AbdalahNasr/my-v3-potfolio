@@ -52,6 +52,7 @@ export default function Navbar() {
         style={{ flex: 1, justifyContent: 'flex-end', minWidth: 0 }}
       >
         <a href="#about" className="text-base md:text-lg font-medium px-2 py-1 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap">{lang === 'ar' ? 'عنّي' : 'About'}</a>
+        <a href="#it-skills" className="text-base md:text-lg font-medium px-2 py-1 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap">{lang === 'ar' ? 'مهارات IT' : 'IT Skills'}</a>
         <a href="#projects" className="text-base md:text-lg font-medium px-2 py-1 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap">{lang === 'ar' ? 'المشاريع' : 'Projects'}</a>
         <a href="#cv" className="text-base md:text-lg font-medium px-2 py-1 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap">CV</a>
         <a href="#contact" className="text-base md:text-lg font-medium px-2 py-1 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap">{lang === 'ar' ? 'تواصل' : 'Contact'}</a>
@@ -64,6 +65,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-center py-4 md:hidden z-50">
           <a href="#about" className="text-base font-medium px-4 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap w-full text-center">{lang === 'ar' ? 'عنّي' : 'About'}</a>
+          <a href="#it-skills" className="text-base font-medium px-4 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap w-full text-center">{lang === 'ar' ? 'مهارات IT' : 'IT Skills'}</a>
           <a href="#projects" className="text-base font-medium px-4 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap w-full text-center">{lang === 'ar' ? 'المشاريع' : 'Projects'}</a>
           <a href="#cv" className="text-base font-medium px-4 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap w-full text-center">CV</a>
           <a href="#contact" className="text-base font-medium px-4 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition whitespace-nowrap w-full text-center">{lang === 'ar' ? 'تواصل' : 'Contact'}</a>

@@ -3,34 +3,30 @@ import './globals.scss';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { LanguageProvider } from '../components/LanguageToggle/LanguageContext';
-import { BackgroundCanvas, CustomCursor, ScrollbarIndicator, HelpDesk } from '../components/DynamicComponents';
+import { BackgroundCanvas, CustomCursor, ScrollbarIndicator } from '../components/DynamicComponents';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Modern Portfolio | 2025',
-    description: 'Building modern web applications with cutting-edge technologies',
-    openGraph: {
-      title: 'Modern Portfolio | 2025',
-      description: 'Building modern web applications with cutting-edge technologies',
-      url: 'https://yourportfolio.com',
-      siteName: 'Portfolio',
-      images: [
-        {
-          url: '/og-image.png',
-          width: 1200,
-          height: 630,
-        },
-      ],
-      locale: 'en_US',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Modern Portfolio | 2025',
-      description: 'Building modern web applications with cutting-edge technologies',
-    },
-  };
-}
+export const metadata: Metadata = {
+  title: 'Abdallah Nasr — Full Stack Developer & IT Support | Cairo',
+  description: 'Full Stack Developer based in Cairo. Building bilingual web apps with Next.js 15, React, TypeScript, MongoDB. Also a network engineer with Cisco CCNA certifications. Open to Frontend and IT Help Desk roles.',
+  keywords: ['Abdallah Nasr', 'Full Stack Developer Cairo', 'Frontend Developer Egypt', 'Next.js developer', 'React developer Cairo', 'IT Support Cairo', 'Cisco CCNA', 'Answerly', 'مطور ويب', 'مطور فرونت إند'],
+  authors: [{ name: 'Abdallah Nasr' }],
+  creator: 'Abdallah Nasr',
+  openGraph: {
+    type: 'website',
+    url: 'https://my-v3-potfolio.vercel.app',
+    title: 'Abdallah Nasr — Full Stack Developer & IT Support | Cairo',
+    description: 'Full Stack Developer & Network Engineer based in Cairo, Egypt. Next.js 15, React, TypeScript, Cisco CCNA.',
+    siteName: 'Abdallah Nasr Portfolio',
+    images: [{ url: 'https://my-v3-potfolio.vercel.app/og-image.png', width: 1200, height: 630, alt: 'Abdallah Nasr — Full Stack Developer Cairo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abdallah Nasr — Full Stack Developer & IT Support | Cairo',
+    description: 'Full Stack Developer & Network Engineer based in Cairo, Egypt.',
+    images: ['https://my-v3-potfolio.vercel.app/og-image.png'],
+  },
+  alternates: { canonical: 'https://my-v3-potfolio.vercel.app' },
+};
 
 export default function RootLayout({
   children,
@@ -82,6 +78,35 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'Person',
+                '@id': 'https://my-v3-potfolio.vercel.app/#person',
+                name: 'Abdallah Nasr',
+                alternateName: 'عبدالله نصر',
+                jobTitle: 'Full Stack Developer',
+                description: 'Full Stack Developer and Network Engineer based in Cairo, Egypt. Specializes in Next.js, React, TypeScript, and holds Cisco CCNA certifications.',
+                url: 'https://my-v3-potfolio.vercel.app',
+                email: 'body16nasr16bn@gmail.com',
+                address: { '@type': 'PostalAddress', addressLocality: 'Cairo', addressCountry: 'EG' },
+                sameAs: ['https://github.com/AbdalahNasr', 'https://linkedin.com/in/abdalah-nasr-63a9a5266'],
+                knowsAbout: ['Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB', 'Angular', 'Cisco CCNA', 'Network Support', 'IT Help Desk', 'Tailwind CSS'],
+              },
+              {
+                '@type': 'WebSite',
+                '@id': 'https://my-v3-potfolio.vercel.app/#website',
+                url: 'https://my-v3-potfolio.vercel.app',
+                name: 'Abdallah Nasr Portfolio',
+                description: 'Portfolio of Abdallah Nasr, Full Stack Developer in Cairo',
+                author: { '@id': 'https://my-v3-potfolio.vercel.app/#person' },
+              },
+            ],
+          }) }}
+        />
       </head>
       <body className="bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark transition-colors duration-300" style={{overflow: 'visible', minHeight: '100vh'}}>
         {/* <div style={{background: 'orange', color: 'black', padding: '1rem', textAlign: 'center', fontWeight: 'bold', fontSize: '2rem', zIndex: 99999999, position: 'relative'}}>LAYOUT TEST: If you see this, layout is rendering</div> */}
@@ -91,7 +116,6 @@ export default function RootLayout({
           <ScrollbarIndicator />
           <Navbar />
           {children}
-          <HelpDesk />
           <Footer />
         </LanguageProvider>
       </body>

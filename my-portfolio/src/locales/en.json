@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Full Stack Developer",
+    "title": "Full Stack Developer & IT Engineer",
     "subtitle": "Building modern web applications with cutting-edge technologies",
     "viewWork": "View My Work",
     "contactMe": "Contact Me",
@@ -35,6 +35,13 @@
     "projectsCompleted": "10+ Projects Completed",
     "happyClients": "Happy Clients",
     "technologies": "Technologies Mastered"
+  },
+  "itSkills": {
+    "title": "IT & Networking Skills",
+    "subtitle": "Beyond frontend — I build and troubleshoot networks too.",
+    "networking": "Networking",
+    "itSupport": "IT Support",
+    "certifications": "Certifications"
   },
   "skills": {
     "title": "Skills & Technologies",
@@ -98,6 +105,27 @@
       "fullstack": "Full Stack"
     },
     "projectsList": {
+      "answerly": {
+        "title": "Answerly",
+        "description": "Bilingual Arabic/English quiz and Q&A platform with 12+ question types including MCQ, True/False, Fill in the Blank, Matching, and more. Built with Next.js 15, MongoDB, and Tailwind CSS v4.",
+        "category": "fullstack",
+        "technologies": [
+          "Next.js 15",
+          "TypeScript",
+          "MongoDB",
+          "Tailwind CSS v4",
+          "shadcn/ui"
+        ],
+        "features": [
+          "12+ interactive question types",
+          "Full Arabic/English bilingual UI",
+          "Real-time quiz engine",
+          "Cloudinary media integration"
+        ],
+        "link": "https://answarly.vercel.app",
+        "repo": "https://github.com/abdalahnasr/answarly",
+        "image": "/Answerly.png"
+      },
       "threads": {
         "title": "Threads App",
         "description": "A social platform with authentication, real-time posts, and responsive design.",

@@ -1,5 +1,4 @@
 "use client";
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '../LanguageToggle/LanguageContext';
 import en from '../../locales/en.json';
@@ -9,7 +8,6 @@ export default function HeroSection() {
   const { lang } = useLanguage();
   const t = lang === 'ar' ? ar : en;
 
-  // Staggered fade-in animation
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -25,7 +23,6 @@ export default function HeroSection() {
     });
   }, [lang]);
 
-  // Parallax effect for .parallax-element
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!sectionRef.current) return;
@@ -46,40 +43,35 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-12 relative z-10"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Image left */}
-      <div className="w-full md:w-2/5 flex justify-center items-center mb-8 md:mb-0 parallax-element" data-depth="0.1">
-        <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 rounded-lg blur-md opacity-50" />
-          <div className="relative rounded-lg shadow-xl overflow-hidden" style={{boxShadow: '0 0 32px 8px #954ce9, 0 0 16px 4px #4cc9f0'}}>
-            <Image
-              src="/Programming.gif"
-              alt={t.hero.imageAlt}
-              width={320}
-              height={320}
-              className="rounded-lg hero-anim"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-      {/* Text right */}
-      <div className="md:w-3/5 flex flex-col items-start justify-center">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="/hero-bg.mp4"
+      />
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{ background: 'linear-gradient(to bottom, rgba(5,8,16,0.75), rgba(5,8,16,0.9))' }}
+      />
+      <div className="relative z-[2] w-full max-w-5xl px-4 md:px-12 flex flex-col items-start justify-center">
         <div className="hero-content">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 max-w-3xl leading-tight md:leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 max-w-3xl leading-tight md:leading-tight text-white">
             <span className="parallax-element block hero-anim" data-depth="0.1">{t.hero.greeting}</span>
             <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.name}</span>
-            <span className="parallax-element block hero-anim " data-depth="0.2">{t.hero.title}</span>
+            <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.title}</span>
             <span
               className="parallax-element block hero-anim bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 text-transparent bg-clip-text whitespace-pre-line"
               data-depth="0.3"
-              style={{display: 'inline', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}
+              style={{ display: 'inline', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
             >
               {t.hero.designer}
             </span>
           </h1>
-          <p className="text-xl md:text-2xl  max-w-2xl mb-12 text-gray-600 dark:text-gray-300 parallax-element hero-anim" data-depth="0.05">
+          <p className="text-xl md:text-2xl max-w-2xl mb-12 text-gray-300 parallax-element hero-anim" data-depth="0.05">
             {t.hero.description}
           </p>
           <button

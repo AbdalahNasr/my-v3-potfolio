@@ -1,5 +1,6 @@
 import HeroSection from '../components/HeroSection/HeroSection';
 import AboutSection from '../components/AboutSection/AboutSection';
+import ITSkills from '@/components/ITSkills';
 import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
 import CVSection from '../components/CVSection/CVSection';
 import ContactSection from '../components/ContactSection/ContactSection';
@@ -13,6 +14,7 @@ export default function Home() {
       <ScrollbarIndicator /> */}
       <HeroSection />
       <AboutSection />
+      <ITSkills />
       <ProjectsSection />
       <CVSection />
       <ContactSection />

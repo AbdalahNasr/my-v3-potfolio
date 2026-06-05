@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "مطور ويب متكامل",
+    "title": "مطور ويب متكامل ومهندس IT",
     "subtitle": "بناء تطبيقات ويب حديثة باستخدام أحدث التقنيات",
     "viewWork": "عرض أعمالي",
     "contactMe": "تواصل معي",
@@ -35,6 +35,13 @@
     "projectsCompleted": "أكثر من 10 مشاريع مكتملة",
     "happyClients": "عملاء سعداء",
     "technologies": "التقنيات المتقنة"
+  },
+  "itSkills": {
+    "title": "مهارات IT والشبكات",
+    "subtitle": "أكثر من الفرونت إند — أبني الشبكات وأحل مشاكلها أيضاً.",
+    "networking": "الشبكات",
+    "itSupport": "دعم IT",
+    "certifications": "الشهادات"
   },
   "skills": {
     "title": "المهارات والتقنيات",
@@ -98,6 +105,27 @@
       "fullstack": "متكامل"
     },
     "projectsList": {
+      "answerly": {
+        "title": "Answerly",
+        "description": "منصة أسئلة واختبارات ثنائية اللغة (عربي/إنجليزي) مع أكثر من 12 نوع سؤال تشمل الاختيار من متعدد، صح/خطأ، أكمل الفراغ، المطابقة، والمزيد. مبنية بـ Next.js 15 و MongoDB و Tailwind CSS v4.",
+        "category": "fullstack",
+        "technologies": [
+          "Next.js 15",
+          "TypeScript",
+          "MongoDB",
+          "Tailwind CSS v4",
+          "shadcn/ui"
+        ],
+        "features": [
+          "أكثر من 12 نوع سؤال تفاعلي",
+          "واجهة ثنائية اللغة عربي/إنجليزي",
+          "محرك اختبارات فوري",
+          "تكامل Cloudinary للوسائط"
+        ],
+        "link": "https://answarly.vercel.app",
+        "repo": "https://github.com/abdalahnasr/answarly",
+        "image": "/Answerly.png"
+      },
       "threads": {
         "title": "تطبيق Threads",
         "description": "منصة اجتماعية مع مصادقة، منشورات فورية، وتصميم متجاوب.",
