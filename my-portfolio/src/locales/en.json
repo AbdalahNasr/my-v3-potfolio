@@ -37,13 +37,6 @@
     "technologies": "Technologies Mastered",
     "cta": "View My Work"
   },
-  "itSkills": {
-    "title": "IT & Networking Skills",
-    "subtitle": "Beyond frontend — I build and troubleshoot networks too.",
-    "networking": "Networking",
-    "itSupport": "IT Support",
-    "certifications": "Certifications"
-  },
   "skills": {
     "title": "Skills & Technologies",
     "subtitle": "Technologies I work with",
@@ -434,5 +427,12 @@
     "scanTitle": "Scan to View My CV",
     "scanDesc": "Scan this QR code with your mobile device to instantly access my detailed curriculum vitae with complete professional experience, education, and skills.",
     "openBtn": "Open CV Website"
+  },
+  "itSkills": {
+    "title": "IT & Networking Skills",
+    "subtitle": "Beyond frontend — I build and troubleshoot networks too.",
+    "networking": "Networking",
+    "itSupport": "IT Support",
+    "certifications": "Certifications"
   }
 }
