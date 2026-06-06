@@ -60,9 +60,12 @@ export default function ITSkillsContent() {
     if (!section) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setBarsVisible(true);
+        if (entry.isIntersecting) {
+          section.classList.add('visible');
+          setBarsVisible(true);
+        }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
     observer.observe(section);
     return () => observer.disconnect();
@@ -72,13 +75,16 @@ export default function ITSkillsContent() {
     <section
       ref={sectionRef}
       id="it-skills"
-      className="section py-20 min-h-[60vh] flex flex-col items-center justify-center bg-transparent transition-colors duration-300"
+      className={`section visible py-20 min-h-[60vh] flex flex-col items-center justify-center bg-transparent transition-colors duration-300${lang === 'ar' ? ' rtl' : ''}`}
     >
       <div className="relative z-10 w-full max-w-6xl px-4 md:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-3 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
+        <h2
+          className="text-4xl md:text-5xl font-bold mb-3 text-center"
+          style={{ color: '#954ce9' }}
+        >
           {t.itSkills.title}
         </h2>
-        <p className="text-lg md:text-xl text-center mb-12 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-center mb-12 max-w-2xl mx-auto">
           {t.itSkills.subtitle}
         </p>
 

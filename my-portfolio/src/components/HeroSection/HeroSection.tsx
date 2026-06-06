@@ -9,19 +9,6 @@ export default function HeroSection() {
   const t = lang === 'ar' ? ar : en;
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!sectionRef.current) return;
-    const children = sectionRef.current.querySelectorAll('.hero-anim');
-    children.forEach((el, i) => {
-      (el as HTMLElement).style.opacity = '0';
-      (el as HTMLElement).style.transform = 'translateY(32px)';
-      setTimeout(() => {
-        (el as HTMLElement).style.transition = 'opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1)';
-        (el as HTMLElement).style.opacity = '1';
-        (el as HTMLElement).style.transform = 'translateY(0)';
-      }, 200 + i * 180);
-    });
-  }, [lang]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -54,24 +41,26 @@ export default function HeroSection() {
         src="/hero-bg.mp4"
       />
       <div
-        className="absolute inset-0 z-[1]"
-        style={{ background: 'linear-gradient(to bottom, rgba(5,8,16,0.3), rgba(5,8,16,0.5))' }}
+        className="absolute inset-0"
+        style={{ zIndex: 1, background: 'linear-gradient(to bottom, rgba(5,8,16,0.3), rgba(5,8,16,0.5))' }}
       />
-      <div className="relative z-[2] w-full max-w-5xl px-4 md:px-12 flex flex-col items-start justify-center">
+      <div
+        className="relative w-full max-w-5xl px-4 md:px-12 flex flex-col items-start justify-center"
+        style={{ zIndex: 2 }}
+      >
         <div className="hero-content">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 max-w-3xl leading-tight md:leading-tight text-white">
             <span className="parallax-element block hero-anim" data-depth="0.1">{t.hero.greeting}</span>
             <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.name}</span>
             <span className="parallax-element block hero-anim" data-depth="0.2">{t.hero.title}</span>
             <span
-              className="parallax-element block hero-anim bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-purple-400 text-transparent bg-clip-text whitespace-pre-line"
+              className="parallax-element block hero-anim hero-designer whitespace-pre-line"
               data-depth="0.3"
-              style={{ display: 'inline', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
             >
               {t.hero.designer}
             </span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-2xl mb-12 text-gray-300 parallax-element hero-anim" data-depth="0.05">
+          <p className="text-xl md:text-2xl max-w-2xl mb-12 parallax-element hero-anim" data-depth="0.05">
             {t.hero.description}
           </p>
           <button
